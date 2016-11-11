@@ -1,0 +1,34 @@
+{ "questions": [{
+
+    "author": "Dividad Van Tomlinpot",
+    "query": "Have you or have you ever known someone whose fallen victim to diphtheria on the oregon trail?",
+    "notes": "I've already tried epsom salts."
+  }, {
+
+    "author": "Sharmy Proverbencaux",
+    "query": "Might someone offer the means by which I might saveth this poor scorch-ed casserole?",
+    "notes": "If there exists a way in which my pastas might not be squanderethed, I'd be ever-so gratefuleth!"
+  }, {
+
+    "author": "Vincenzo Armani Marino Badoosh",
+    "query": "Hey. How you doin'?",
+    "notes": "Awlriight.. submit. Eyyyy..."
+  }],
+
+  "answers": [{
+
+    "author": "Jil, just Jil",
+    "reply": "Pretty sure epsom salts should do it.",
+    "rating": 3
+  }, {
+
+    "author": "Bhartt Schtodtt",
+    "reply": "Solution. Less epsom in the casseroni, brother.",
+    "rating": 8
+  }, {
+
+    "author": "Montanarama Wiconsinator",
+    "reply": "Too busy rackin' up buffalo kills for this panel! Zang!",
+    "rating": 1
+  }]
+}
