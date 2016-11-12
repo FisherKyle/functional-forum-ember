@@ -3,6 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model() {
-    return this.query.findAll('query');
+    return this.store.findAll('query');
   },
 });
