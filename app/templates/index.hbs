@@ -1,10 +1,21 @@
-<header><h2>burning questions hello world</h2></header>
+<header></header>
 
 <div class="jumbotron" id="indexTron">
+
+  <div id="forum-header">
+
+    <h3><span class="glyphicon glyphicon-fire"></span> burning questions q & a <span class="glyphicon glyphicon-fire"></span></h3>
+
+  </div>
+  <hr>
+  <hr>
+
 
   {{#each model as |query|}}
 
     {{query-tile query=query}}
+
+      <hr>
 
   {{/each}}
 
