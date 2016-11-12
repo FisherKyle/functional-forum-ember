@@ -1,4 +1,4 @@
-{ "mockq": [{
+{ "queries": [{
 
     "author": "Dividad Van Tomlinpot",
     "query": "Have you or have you ever known someone whose fallen victim to diphtheria on the oregon trail?",
@@ -13,22 +13,5 @@
     "author": "Vincenzo Armani Marino Badoosh",
     "query": "Hey. How you doin'?",
     "notes": "Awlriight.. submit. Eyyyy..."
-  }],
-
-  "mocka": [{
-
-    "author": "Jil, just Jil",
-    "reply": "Pretty sure epsom salts should do it.",
-    "rating": 3
-  }, {
-
-    "author": "Bhartt Schtodtt",
-    "reply": "Solution. Less epsom in the casseroni, brother.",
-    "rating": 8
-  }, {
-
-    "author": "Montanarama Wiconsinator",
-    "reply": "Too busy rackin' up buffalo kills for this panel! Zang!",
-    "rating": 1
   }]
 }

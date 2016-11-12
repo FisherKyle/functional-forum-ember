@@ -7,12 +7,12 @@
 <div class="question-block">
   <ul>
 
-    {{#each model as |mockq|}}
+    {{#each model as |query|}}
 
-      <li class="question-line">{{mockq.author}}</li>
+      <li class="question-line">{{query.author}}</li>
       <h4>
-        <li class="question-line">{{mockq.query}}</li>
-        <li class="question-line">{{mockq.notes}}</li>
+        <li class="question-line">{{query.query}}</li>
+        <li class="question-line">{{query.notes}}</li>
       </h4>
 
     {{/each}}
