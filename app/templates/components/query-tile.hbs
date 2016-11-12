@@ -1,0 +1,22 @@
+<h4>question from {{query.author}} :</h4>
+<hr>
+<div class="container">
+
+
+  <div class="jumbotron" onClick={{action 'showContent'}} doubleClick={{action 'hideContent'}}>
+    <div class="row">
+        <h4 class="question-line">"{{query.query}}" {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action='showContent'}}{{/bs-button}} {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action='hideContent'}}{{/bs-button}}</h4>
+    </div>
+
+    {{#if detailsVisible}}
+    <div class="container" onClick={{action 'hideContent'}}>
+    <h4 class="details-line">{{query.notes}}</h4>
+    </div>
+
+
+
+
+    {{/if}}
+
+</div>
+</div>

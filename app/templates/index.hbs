@@ -1,21 +1,11 @@
-<header>
+<header><h2>burning questions hello world</h2></header>
 
-  <h2>burning questions hello world</h2>
+<div class="jumbotron" id="indexTron">
 
-</header>
+  {{#each model as |query|}}
 
-<div class="question-block">
-  <ul>
+    {{query-tile query=query}}
 
-    {{#each model as |query|}}
+  {{/each}}
 
-      <li class="question-line">{{query.author}}</li>
-      <h4>
-        <li class="question-line">{{query.query}}</li>
-        <li class="question-line">{{query.notes}}</li>
-      </h4>
-
-    {{/each}}
-
-  </ul>
 </div>
