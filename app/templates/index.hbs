@@ -3,3 +3,19 @@
   <h2>burning questions hello world</h2>
 
 </header>
+
+<div class="question-block">
+  <ul>
+
+    {{#each model as |mockq|}}
+
+      <li class="question-line">{{mockq.author}}</li>
+      <h4>
+        <li class="question-line">{{mockq.query}}</li>
+        <li class="question-line">{{mockq.notes}}</li>
+      </h4>
+
+    {{/each}}
+
+  </ul>
+</div>

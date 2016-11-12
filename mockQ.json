@@ -1,4 +1,4 @@
-{ "questions": [{
+{ "mockq": [{
 
     "author": "Dividad Van Tomlinpot",
     "query": "Have you or have you ever known someone whose fallen victim to diphtheria on the oregon trail?",
@@ -15,7 +15,7 @@
     "notes": "Awlriight.. submit. Eyyyy..."
   }],
 
-  "answers": [{
+  "mocka": [{
 
     "author": "Jil, just Jil",
     "reply": "Pretty sure epsom salts should do it.",

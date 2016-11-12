@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var mockQ = [{
+var mockq = [{
     "id": 1,
     "author": "Dividad Van Tomlinpot",
     "query": "Have you or have you ever known someone whose fallen victim to diphtheria on the oregon trail?",
@@ -20,6 +20,6 @@ var mockQ = [{
 export default Ember.Route.extend({
 
   model() {
-    return mockQ;
+    return mockq;
   },
 });
