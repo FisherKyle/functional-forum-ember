@@ -4,6 +4,12 @@ import Ember from 'ember';
 
   actions:
   {
+
+    showForm()
+    {
+      this.set('postNewQuery', true);
+    },
+
     saveQuery1()
     {
       var params = {
@@ -13,14 +19,9 @@ import Ember from 'ember';
         notes: this.get('notes')
 
       };
-      this.set('questionFormShow', false);
+      this.set('postNewQuery', false);
       this.sendAction('saveQuery', params);
     },
-
-  showForm()
-  {
-    this.set('questionFormShow', true);
-  }
 
   }
 });
