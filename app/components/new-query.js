@@ -2,24 +2,25 @@ import Ember from 'ember';
 
  export default Ember.Component.extend({
 
-   actions:
-   {
-     saveQuery1()
-     {
-       var params = {
+  actions:
+  {
+    saveQuery1()
+    {
+      var params = {
 
-         author: this.get('author'),
-         query: this.get('query'),
-         notes: this.get('notes')
+        author: this.get('author'),
+        query: this.get('query'),
+        notes: this.get('notes')
 
-       };
-       this.set('postNewQuery', false);
-       this.sendAction('saveQuery2', params);
-     },
+      };
+      this.set('questionFormShow', false);
+      this.sendAction('saveQuery', params);
+    },
 
-     showForm() {
-       this.set('postNewQuery', true);
-     },
-     
-   }
- });
+  showForm()
+  {
+    this.set('questionFormShow', true);
+  }
+
+  }
+});

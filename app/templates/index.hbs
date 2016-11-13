@@ -4,19 +4,23 @@
 
   <div id="forum-header">
 
-    <h3><span class="glyphicon glyphicon-fire"></span> burning questions q & a <span class="glyphicon glyphicon-fire"></span></h3>
+    <h3><span class="glyphicon glyphicon-fire"></span> burning querys q <em>n'</em> a <span class="glyphicon glyphicon-fire"></span></h3>
 
   </div>
   <hr>
   <hr>
 
+  <div class="container">
+     {{#each model as |question|}}
+       {{query-tile query=question}}
+     {{/each}}
+  </div>
 
-  {{#each model as |query|}}
+  <hr>
+  <hr>
 
-    {{query-tile query=query}}
-
-      <hr>
-
-  {{/each}}
+  <div class="container">
+    {{new-query saveQuery2="saveQuery3"}}
+  </div>
 
 </div>

@@ -1,8 +1,9 @@
 <div class="container" id="newQueryBlock">
 
-{{#if postNewQuery}}
+  <h4 id="forumHeaderParagraph">Are you curious about something? Is your need for the answer just burning you up inside? Click on the button below. You'll be provided with a form to post your question to the forum.</h4>
 
-  <h4 id="forumHeaderParagraph">Are you curious about something? Is your need for the answer just burning you up inside? Fill out the fields below to post your question to the forum.</h4>
+  {{#if questionFormShow}}
+
 
     <form>
 
@@ -25,7 +26,7 @@
         {{textarea class="form-control" value=notes id="notes"}}
       </div>
 
-      <button class="btn btn-xs btn-success" {{action 'saveQuestion1'}}>Save</button>
+      <button class="btn btn-xs btn-success" {{action 'saveQuestion'}}>Save</button>
     </form>
 
   {{else}}
@@ -33,5 +34,4 @@
     <button class="btn btn-default" {{action "questionFormShow"}}>ask forum</button>
 
   {{/if}}
-
 </div>
