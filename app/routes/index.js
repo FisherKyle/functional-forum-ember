@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   actions:
   {
     
-    saveQuery3(params) {
+    saveQuery(params) {
       var newQuery = this.store.createRecord('query', params);
       newQuery.save();
       this.transitionTo('index');

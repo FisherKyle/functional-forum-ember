@@ -10,7 +10,7 @@ import Ember from 'ember';
       this.set('postNewQuery', true);
     },
 
-    saveQuery1()
+    saveQuery()
     {
       var params = {
 
@@ -20,6 +20,7 @@ import Ember from 'ember';
 
       };
       this.set('postNewQuery', false);
+      console.log(params);
       this.sendAction('saveQuery', params);
     },
 

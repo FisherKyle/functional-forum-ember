@@ -16,7 +16,7 @@
 
         <label for="query">Enter the question you'd like to ask :</label>
         <h6>Below, you'll have the chance to be more descriptive. For now, keep your question simple. One or two sentences is suggested.</h6>
-        {{input class="form-control" value=content id="content"}}
+        {{input class="form-control" value=query id="query"}}
       </div>
 
       <div class="form-group" id="queryFormNotes">
@@ -25,7 +25,7 @@
         {{textarea class="form-control" value=notes id="notes"}}
       </div>
 
-      <button class="btn btn-default" {{action 'saveQuestion'}}>Save</button>
+      <button class="btn btn-default" {{action 'saveQuery'}}>Save</button>
     </form>
 
   {{else}}
