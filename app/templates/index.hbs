@@ -1,4 +1,4 @@
-<header></header>
+{{header-tile}}
 
 <div class="jumbotron" id="indexTron">
 
@@ -11,7 +11,8 @@
   <hr>
 
   <div class="container">
-     {{#each model as |query|}}
+     {{#each model.queries as |query|}}
+     <hr>
        {{query-tile query=query update="update"}}
      {{/each}}
   </div>
@@ -24,3 +25,5 @@
   </div>
 
 </div>
+
+{{footer-tile}}

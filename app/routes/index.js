@@ -4,32 +4,20 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('query');
+    return Ember.RSVP.hash({
+      queries: this.store.findAll('query'),
+      replies: this.store.findAll('reply')
+    });
   },
 
-  actions:
-  {
+  actions: {
 
     saveQuery(params)
     {
       var newQuery = this.store.createRecord('query', params);
       newQuery.save();
       this.transitionTo('index');
-    },
-
-    update(query, params)
-    {
-      Object.keys(params).forEach(function(key)
-      {
-
-        if (params[key]!== undefined)
-        {
-          query.set(key, params[key]);
-        }
-      });
-
-      query.save();
-      this.transitionTo('index');
     }
+    
   }
 });

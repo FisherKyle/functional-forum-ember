@@ -12,10 +12,6 @@ export default Ember.Component.extend({
 
     hideContent: function() {
      this.set('detailsVisible', false);
-    },
-
-    update(query, params) {
-      this.sendAction('update', query, params);
     }
   }
 });

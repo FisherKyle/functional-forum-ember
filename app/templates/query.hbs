@@ -1,0 +1,17 @@
+{{header-tile}}
+
+  <div class="jumbotron">
+
+    <h2>{{model.author}}</h2>
+
+    {{query-detail query=model}}
+
+    {{new-reply saveReply="saveReply" query=model}}
+    {{update-query query=model update="update"}}
+
+
+    {{#link-to 'index'}} <h4>return</h4> {{/link-to}}
+
+  </div>
+
+{{footer-tile}}

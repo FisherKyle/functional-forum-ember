@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="query-notes">
+
+    <p id="detail-text">{{query.notes}}</p>
+
+  </div>
+
+  <ul class="list-group">
+
+    {{#each model.replies as |reply|}}
+
+      <li class="list-group-item">
+        <h5>{{reply.content}}</h5>
+        <h6>{{reply.author}}'s answer has a rating of: {{reply.rating}}</h6>
+      </li>
+      
+    {{/each}}
+
+  </ul>
+
+</div>

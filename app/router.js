@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('quert', {path: '/query/:query_id'});
+  this.route('query', {path: '/query/:query_id'});
 });
 
 export default Router;

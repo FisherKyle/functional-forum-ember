@@ -22,7 +22,6 @@ import Ember from 'ember';
 
       this.set('postNewQuery', false);
       this.sendAction('saveQuery', params);
-    },
-
+    }
   }
 });

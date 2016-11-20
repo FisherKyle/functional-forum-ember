@@ -1,6 +1,6 @@
 <div class="container">
 
-<h4 id="forumHeaderParagraph">In a benevolent kind of mood? Is that helping hand of yours burning a hole in your pocket, yearning to break free to be of some sort of assistance? If so, first click on the "post answer" button found beneath any of the displayed questions. Then, you'll be provided with a couple of forms. Fill them out and you'll be saving lives in no time!</h4>
+<h4 id="forumHeaderParagraph">In a benevolent kind of mood? Is that helping hand of yours burning a hole in your pocket, yearning to break free to be of some sort of assistance? If so, first click on the "post your answer" button found beneath any of the displayed questions. Then, you'll be provided with a couple of forms. Fill them out and you'll be saving lives in no time!</h4>
 
 <hr>
 
@@ -16,16 +16,16 @@
 
     <div class="form-group">
 
-      <label for="answer">enter your reply : </label>
+      <label for="reply">enter your reply : </label>
       {{input class="form-control" value=content id="content"}}
     </div>
 
-    <button class="btn btn-default" {{action 'saveAnswer'}}>post answer</button>
+    <button class="btn btn-default" {{action 'saveReply'}}>post your answer</button>
 
   </form>
 
 {{else}}
 
-  <button class="btn btn-default" {{action 'answerFormShow'}}> Question</button>
+  <button class="btn btn-default" {{action 'replyFormShow'}}> Question</button>
 {{/if}}
 </div>
