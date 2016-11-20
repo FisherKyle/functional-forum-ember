@@ -3,32 +3,36 @@
   <div class="jumbotron" onClick={{action 'showContent'}}>
 
     {{#link-to 'query' query.id}}
-    <h5>{{query.author}} asks:</h5>
+
+      <div class="row">
+
+        <h5>
+          {{query.author}} asks:
+        </h5>
+
+        <h3>
+          "{{query-rating query}} {{query.query}}"
+        </h3>
+
+      </div>
+
     {{/link-to}}
 
-    <div class="row">
-      <hr>
-
-        <h4 class="question-block">
-          "{{query.query}}"
-          {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
-        </h4>
-
-    </div>
+    {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
 
     {{#if detailsVisible}}
 
-      <div class="container" onClick={{action 'showContent'}}>
+      <div class="container">
 
         <h5 class="details-line">
           "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}} hide details{{/bs-button}}
         </h5>
 
       </div>
-
     {{/if}}
 
-    {{update-query query=query update="update"}}
-
   </div>
+
+  {{update-query query=query update="update"}}
+
 </div>

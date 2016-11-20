@@ -6,6 +6,8 @@
 
     {{query-detail query=model deleteQuery="deleteQuery" deleteAnswer="deleteAnswer"}}
 
+    {{new-reply saveReply="saveReply" query=model}}
+
       <ul class="list-group">
 
         {{#each model.replies as |reply|}}
@@ -16,7 +18,6 @@
 
       </ul>
 
-    {{new-reply saveReply="saveReply" query=model}}
 
     {{update-query query=model update="update"}}
 

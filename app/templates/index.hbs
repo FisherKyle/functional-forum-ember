@@ -4,7 +4,7 @@
 
   <div id="forum-header">
 
-    <h3><span class="glyphicon glyphicon-fire"></span> burning querys q <em>n'</em> a <span class="glyphicon glyphicon-fire"></span></h3>
+    <h3> burning queries <em> q n'a </em> </h3>
 
   </div>
   <hr>
@@ -12,7 +12,6 @@
 
   <div class="container">
      {{#each model.queries as |query|}}
-     <hr>
        {{query-tile query=query update="update"}}
      {{/each}}
   </div>
