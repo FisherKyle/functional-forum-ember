@@ -6,6 +6,20 @@
 
     {{query-detail query=model}}
 
+
+      <ul class="list-group">
+
+        {{#each model.replies as |reply|}}
+
+          <li class="list-group-item">
+            <h5>{{reply.content}}</h5>
+            <h6>{{reply.author}}'s answer has a rating of: {{reply.rating}}</h6>
+          </li>
+
+        {{/each}}
+
+      </ul>
+
     {{new-reply saveReply="saveReply" query=model}}
     {{update-query query=model update="update"}}
 

@@ -14,22 +14,21 @@
           {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
         </h4>
 
-
-        {{#if detailsVisible}}
-
-          <div class="container" onClick={{action 'showContent'}}>
-
-            <h5 class="details-line">
-              "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}} hide details{{/bs-button}}
-            </h5>
-
-          </div>
-
-        {{/if}}
     </div>
 
-    {{update-query query=query update="update"}}
+    {{#if detailsVisible}}
 
+      <div class="container" onClick={{action 'showContent'}}>
+
+        <h5 class="details-line">
+          "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}} hide details{{/bs-button}}
+        </h5>
+
+      </div>
+
+    {{/if}}
+
+    {{update-query query=query update="update"}}
 
   </div>
 </div>

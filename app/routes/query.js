@@ -32,10 +32,22 @@ export default Ember.Route.extend({
 
       newReply.save().then(function()
       {
-       return query.save()
+       return query.save();
       });
 
-      this.transitionTo('query', query);
+      this.transitionTo('index');
+    },
+
+    deleteQuery(query)
+    {
+      query.destroyRecord();
+      this.transitionTo('index');
+    },
+
+    deleteReply(reply)
+    {
+      reply.destroyRecord();
+      this.transitionTo('index');
     }
   }
 });

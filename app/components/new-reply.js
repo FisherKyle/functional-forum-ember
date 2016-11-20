@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   actions:
   {
 
-    showReplyForm()
+    replyFormShow()
     {
       this.set('postNewReply', true);
     },

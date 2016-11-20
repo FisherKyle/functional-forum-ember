@@ -17,6 +17,12 @@ export default Ember.Route.extend({
       var newQuery = this.store.createRecord('query', params);
       newQuery.save();
       this.transitionTo('index');
+    },
+
+    deleteQuery(query)
+    {
+      query.destroyRecord();
+      this.transitionTo('index');
     }
     
   }
