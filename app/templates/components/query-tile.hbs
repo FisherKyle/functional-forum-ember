@@ -1,28 +1,30 @@
 <div class="container">
 
-  <h4 id="query-head"> from {{query.author}} :</h4>
-  <hr>
-  <div class="container">
+  <div class="jumbotron" onClick={{action 'showContent'}}>
+    <h5 id="query-head"> from {{query.author}} :</h5>
 
-    <div class="jumbotron" onClick={{action 'showContent'}}>
-      <div class="row">
-          <h4 class="question-block">
+    <div class="row">
+      <hr>
 
-            "{{query.query}}"
-            {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action='showContent'}}{{/bs-button}}
-            {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action='hideContent'}}{{/bs-button}}
+        <h4 class="question-block">
+          "{{query.query}}"
+          {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action='showContent'}} show details{{/bs-button}}
+        </h4>
 
-          </h4>
-      </div>
+        {{#if detailsVisible}}
 
-      {{#if detailsVisible}}
+          <div class="container" onClick={{action 'showContent'}}>
 
-      <div class="container" onClick={{action 'showContent'}}>
-        <h4 class="details-line">{{query.notes}}</h4>
-      </div>
+            <h5 class="details-line">
+              {{query.notes }} {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action='hideContent'}} hide details{{/bs-button}}
+            </h5>
 
-      {{/if}}
+          </div>
 
+        {{/if}}
     </div>
+
+    {{update-query query=query update="update"}}
+
   </div>
 </div>

@@ -19,6 +19,7 @@ import Ember from 'ember';
         notes: this.get('notes')
 
       };
+
       this.set('postNewQuery', false);
       console.log(params);
       this.sendAction('saveQuery', params);
