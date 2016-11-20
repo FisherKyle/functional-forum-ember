@@ -26,7 +26,6 @@ export default Ember.Route.extend({
         {
           query.set(key, params[key]);
         }
-
       });
 
       query.save();

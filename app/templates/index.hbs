@@ -11,8 +11,8 @@
   <hr>
 
   <div class="container">
-     {{#each model as |question|}}
-       {{query-tile query=question}}
+     {{#each model as |query|}}
+       {{query-tile query=query update="update"}}
      {{/each}}
   </div>
 
