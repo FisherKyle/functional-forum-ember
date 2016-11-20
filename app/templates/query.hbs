@@ -4,25 +4,21 @@
 
     <h2>{{model.author}}</h2>
 
-    {{query-detail query=model}}
-
+    {{query-detail query=model deleteQuery="deleteQuery" deleteAnswer="deleteAnswer"}}
 
       <ul class="list-group">
 
         {{#each model.replies as |reply|}}
 
-          <li class="list-group-item">
-            <h5>{{reply.content}}</h5>
-            <h6>{{reply.author}}'s answer has a rating of: {{reply.rating}}</h6>
-          </li>
+          {{answer-tile reply=reply deleteReply="deleteReply"}}
 
         {{/each}}
 
       </ul>
 
     {{new-reply saveReply="saveReply" query=model}}
-    {{update-query query=model update="update"}}
 
+    {{update-query query=model update="update"}}
 
     {{#link-to 'index'}} <h4>return</h4> {{/link-to}}
 

@@ -3,27 +3,27 @@
   <form>
     <div class="form-group">
       <label for="author">re-enter username :</label>
-      {{input class="form-control" value=author id="author"}}
+      {{input class="form-control" value=author}}
     </div>
 
     <div class="form-group">
-      <label for="content">re-enter your question :</label>
+      <label for="query">re-enter your question :</label>
       {{input class="form-control" value=query id="query"}}
     </div>
 
     <div class="form-group">
-      <label for="details">re-enter the details relating to your question :</label>
+      <label for="notes">re-enter the details relating to your question :</label>
       {{textarea class="form-control" value=notes id="notes"}}
     </div>
 
     <hr>
 
-    <button class="btn btn-default" {{action "update" query}}>submit</button>
+    <button class="btn btn-default" {{action "update" query}}> submit </button>
 
   </form>
 
 {{else}}
 
-  <button  class="btn btn-xs btn-default"{{action "updateQueryForm"}}>update</button>
+  <button class="btn btn-xs btn-default"{{action "updateQueryForm"}}> update </button>
 
 {{/if}}
