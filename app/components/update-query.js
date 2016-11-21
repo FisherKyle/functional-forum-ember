@@ -10,18 +10,16 @@ export default Ember.Component.extend({
       this.set('updateQueryForm', true);
     },
 
-    update(query)
-    {
+    updateQuery(query){
 
-      var params =
-      {
+      var params = {
         author: this.get('author'),
         query: this.get('query'),
         notes: this.get('notes')
       };
 
       this.set('updateQueryForm', false);
-      this.sendAction('update', query, params);
+      this.sendAction('updateQuery', query, params);
     }
   }
 });

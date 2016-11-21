@@ -3,14 +3,14 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   actions: {
-    
-    delete(query) {
-      if (confirm('This action is permanent. Continue?')) {
+
+    deleteQuery(query) {
+      if (confirm('This action is permanent. Delete this question?')) {
         this.sendAction('deleteQuery', query);
       }
     },
 
-    deleteAnswer(reply) {
+    deleteReply(reply) {
       this.sendAction('deleteReply', reply);
     }
   }

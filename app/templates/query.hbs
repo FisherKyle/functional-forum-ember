@@ -2,11 +2,11 @@
 
   <div class="jumbotron">
 
-    <h2>{{model.author}}</h2>
+    <h4>{{model.author}} asked the question : </h4>
+    <h3><em>"{{model.query}}"</em></h3>
+    <h5><em>additional information: "{{model.notes}}"</em></h5>
 
-    {{query-detail query=model deleteQuery="deleteQuery" deleteAnswer="deleteAnswer"}}
-
-    {{new-reply saveReply="saveReply" query=model}}
+    {{new-reply saveReply="saveReply" deleteQuery="deleteQuery" query=model}}
 
       <ul class="list-group">
 
@@ -19,7 +19,8 @@
       </ul>
 
 
-    {{update-query query=model update="update"}}
+    {{query-detail query=model deleteQuery="deleteQuery" deleteReply="deleteReply"}}
+    {{update-query query=model updateQuery="updateQuery"}}
 
     {{#link-to 'index'}} <h4>return</h4> {{/link-to}}
 

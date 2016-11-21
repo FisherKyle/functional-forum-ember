@@ -1,38 +1,46 @@
 <div class="container">
 
   <div class="jumbotron" onClick={{action 'showContent'}}>
+    <div class="row">
+      <div class="col_xs_9">
 
-    {{#link-to 'query' query.id}}
+        {{#link-to 'query' query.id}}
+            <h5>
+              {{query-rating query}} {{query.query}}
+            </h5>
+        {{/link-to}}
 
-      <div class="row">
-
-        <h5>
-          {{query.author}} asks:
-        </h5>
+        <h5> asks :</h5>
 
         <h3>
           "{{query-rating query}} {{query.query}}"
         </h3>
-
       </div>
+    </div>
 
-    {{/link-to}}
-
-    {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
+    <div class="col_xs_3">
+      {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
+    </div>
 
     {{#if detailsVisible}}
 
       <div class="container">
 
-        <h5 class="details-line">
-          "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}} hide details{{/bs-button}}
-        </h5>
+        <h4 class="details-line">
+
+          "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}
+
+          <hr>
+
+          {{update-query query=query updateQuery="updateQuery" action="updateQuery" class="btn btn-warning" icon="glyphicon glyphicon-pencil"}}
+
+          {{query-detail query=query deleteQuery="deleteQuery" action="deleteQuery" class="btn btn-warning" icon="glyphicon glyphicon-remove"}}
+
+        </h4>
+          <!-- {{#bs-button class="btn btn-danger" type="primary" icon="glyphicon glyphicon-remove" action="deleteQuery"}}delete query{{/bs-button}} -->
+          <!-- {{update-query query=query update="update"}} -->
 
       </div>
     {{/if}}
-
   </div>
-
-  {{update-query query=query update="update"}}
-
 </div>

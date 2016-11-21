@@ -18,12 +18,13 @@
 
     <hr>
 
-    <button class="btn btn-default" {{action "update" query}}> submit </button>
+    {{#bs-button class="btn btn-warning" type="primary" icon="glyphicon glyphicon-pencil" action="updateQuery"}}edit query{{/bs-button}}
 
   </form>
 
 {{else}}
 
-  <button class="btn btn-xs btn-default"{{action "updateQueryForm"}}> update </button>
+{{#bs-button class="btn btn-warning" type="primary" icon="glyphicon glyphicon-pencil" action="updateQuery"}}edit query{{/bs-button}}
+  <!-- <button class="btn btn-xs btn-default"{{action "updateQueryForm"}}> update </button> -->
 
 {{/if}}

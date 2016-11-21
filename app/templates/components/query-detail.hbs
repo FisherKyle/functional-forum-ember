@@ -1,11 +1,6 @@
-<div class="container">
-
-  <div class="query-notes">
-
-    <p id="detail-text">{{query.notes}}</p>
-
-  </div>
-
-  <button class="btn btn-danger" {{action 'delete' query}}>delete</button>
+<div class="query-notes" {{action 'deleteQuery' query}}>
+    <!-- <p id="detail-text">{{query.notes}}</p> -->
+    <!-- <button class="btn btn-danger" {{action 'delete' query}}></button> -->
+    {{#bs-button class="btn btn-danger" type="primary" icon="glyphicon glyphicon-remove" action="deleteQuery"}}delete query{{/bs-button}}
 
 </div>

@@ -6,7 +6,7 @@ export function queryRating(params/*, hash*/) {
 
   if(query.get('replies').get('length') >= 5) {
 
-    return Ember.String.htmlSafe('<span class="glyphicon glyphicon-fire">trending!</span>');
+    return Ember.String.htmlSafe('<span class="glyphicon glyphicon-fire">current burning queries</span>');
 
   }
 }

@@ -14,9 +14,15 @@ export default Ember.Component.extend({
      this.set('detailsVisible', false);
     },
 
-    // update(query, params) {
-    //   this.sendAction('update', query, params);
-    //
-    // }
+    updateQuery(query, params) {
+      this.sendAction('updateQuery', query, params);
+    },
+
+    deleteQuery(query) {
+      if (confirm('This action is permanent. Delete this question?')) {
+        this.sendAction('deleteQuery', query);
+      }
+    }
+
   }
 });

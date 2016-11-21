@@ -41,11 +41,13 @@ export default Ember.Route.extend({
     deleteQuery(query)
     {
       query.destroyRecord();
+
       this.transitionTo('index');
     },
 
     deleteReply(reply)
     {
+
       reply.destroyRecord();
       this.transitionTo('index');
     }
