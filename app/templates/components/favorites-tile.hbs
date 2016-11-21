@@ -1,1 +1,5 @@
-{{yield}}
+{{#each favorites.favorites as |query|}}
+
+   {{query.query}} {{query.author}}
+   
+{{/each}}

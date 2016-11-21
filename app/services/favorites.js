@@ -1,4 +1,11 @@
-import Ember from 'ember';
+  import Ember from 'ember';
 
-export default Ember.Service.extend({
+  export default Ember.Service.extend({
+
+    favorites: [],
+
+    add(query) {
+      this.get('favorites').pushObject(query);
+    }
+    
 });
