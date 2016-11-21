@@ -2,11 +2,12 @@
 
   <hr>
 
-  <h5>{{reply.answer}}</h5>
+  <h5>{{reply.reply}}</h5>
+  <h4>{{author-rating}}</h4>
 
   <hr>
 
-  <h6>{{reply.author}}'s answer has a ranking of: {{reply.rating}}</h6>
+  <!-- <h6>{{reply.author}}'s answer has a ranking of: {{reply.rating}}</h6> -->
 
   <button class="btn btn-xs btn-danger" {{action 'deleteReply' reply}}>remove this answer</button>
 
