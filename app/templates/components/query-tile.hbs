@@ -1,25 +1,31 @@
-{{#link-to 'query' query.id}}
-  <h4>
-    {{query-rating query}} {{query.query}}
-  </h4>
-  <!-- <button class="btn btn-primary" {{action 'addToFavorites' query}}>save query as favorite</button> -->
-{{/link-to}}
+  <div>
+    <h4>{{query.author}} asks :</h4>
+    <h3 id="forum">
+      <em>{{query-rating query}} "{{query.query}}"</em>
+    </h3>
+  </div>
+
 
 <div class="container" onClick={{action 'showContent'}}>
 
   <div class="row">
-    {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
+    {{#link-to 'query' query.id}}
+
+    {{#bs-button class="btn btn-success" type="primary" icon="glyphicon glyphicon-puzzle-2" action="showContent"}}go to details page{{/bs-button}}
+
+    <!-- <button class="btn btn-xl btn-success" type="primary" icon="glyphicon glyphicon-plus">query page</button> -->
+    {{/link-to}}
+    {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}}see more{{/bs-button}}
   </div>
 
   {{#if detailsVisible}}
 
     <div class="container">
-      <h4>"{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}</h4>
+      <h4 id="forum">
+        <em>"{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}</em>
+      </h4>
     </div>
 
-    {{#link-to 'query' query.id}}
-      <button class="btn btn-default">query page</button>
-    {{/link-to}}
 
   {{/if}}
 </div>

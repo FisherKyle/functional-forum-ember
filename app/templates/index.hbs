@@ -4,15 +4,12 @@
 
   <div id="forum-header">
 
-    <h3> burning queries <em> q n'a </em> </h3>
-
   </div>
-  <hr>
-  <hr>
 
   <div class="container">
      {{#each model.queries as |query|}}
        {{query-tile query=query update="update"}}
+       <hr>
      {{/each}}
   </div>
 

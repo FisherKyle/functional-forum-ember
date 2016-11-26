@@ -1,12 +1,21 @@
 <li class="list-group-item">
 
+  <div class="row">
+    <div class="col-xs-3">
+      <h5>author // rating:</h5>
+      <h4>{{details}}</h4>
+    </div>
+    <div class="col-xs-9">
+      <h3 id="forum">"{{reply.answer}}"</h3>
+    </div>
+  </div>
+
   <hr>
+  <div class="row">
 
-  <h3>"{{reply.answer}}"</h3>
-  <h4>{{details}}</h4>
+    <button class="btn btn-sm btn-danger" {{action 'delete' reply}}>remove this answer</button>
 
-  <hr>
+  </div>
 
-  <button class="btn btn-xs btn-danger" {{action 'deleteReply' reply}}>remove this answer</button>
 
 </li>

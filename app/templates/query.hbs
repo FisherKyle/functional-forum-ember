@@ -3,24 +3,25 @@
   <div class="jumbotron">
 
     <h4>{{model.author}} asked the question : </h4>
-    <h3><em>"{{model.query}}"</em></h3>
-    <h5><em>additional information: "{{model.notes}}"</em></h5>
+    <hr>
+    <h2 id="forum">"{{model.query}}"</h2>
+
+    <div class="container">
+      <h3 id="forum"><em>"{{model.notes}}"</em></h3>
+    </div>
+
+    <hr>
 
     {{new-reply saveReply="saveReply" deleteQuery="deleteQuery" query=model}}
 
       <ul class="list-group">
-
         {{#each model.replies as |reply|}}
-
           {{answer-tile reply=reply deleteReply="deleteReply"}}
-
         {{/each}}
-
       </ul>
 
-
-    {{query-detail query=model deleteQuery="deleteQuery" deleteReply="deleteReply"}}
-    {{update-query query=model updateQuery="updateQuery"}}
+      {{query-detail query=model deleteQuery="deleteQuery" deleteReply="deleteReply"}}
+      {{update-query query=model updateQuery="updateQuery"}}
 
     {{#link-to 'index'}} <h4>return</h4> {{/link-to}}
 

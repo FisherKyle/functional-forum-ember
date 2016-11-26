@@ -47,7 +47,13 @@ export default Ember.Route.extend({
     {
 
       reply.destroyRecord();
-      this.transitionTo('index');
+      this.transitionTo('answer-tile');
+    },
+
+    addToFavorites(query)
+    {
+      query.addToFavorites();
+      this.transitionTo('query-detail');
     }
   }
 });

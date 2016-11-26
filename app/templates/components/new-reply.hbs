@@ -16,7 +16,7 @@
       </div>
 
       <button class="btn btn-default" {{action 'saveReply'}}>submit</button>
-      
+
       {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}close form{{/bs-button}}
 
       <hr>
@@ -27,6 +27,6 @@
   </div>
   {{else}}
 
-  <button class="btn btn-default" {{action 'replyFormShow'}}>post an answer</button>
+  <button class="btn btn-sm btn-success" {{action 'replyFormShow'}}>post an answer</button>
 
 {{/if}}

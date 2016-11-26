@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  favorites: Ember.inject.service(),
 
   actions: {
 
@@ -12,6 +13,11 @@ export default Ember.Component.extend({
 
     deleteReply(reply) {
       this.sendAction('deleteReply', reply);
+    },
+
+    addToFavorites(query) {
+      this.get('favorites').add(query);
     }
+
   }
 });

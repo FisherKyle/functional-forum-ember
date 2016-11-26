@@ -1,0 +1,13 @@
+h3, h4, h5, h6 {
+  font-family: 'Muli';
+}
+
+#forum {
+  font-family: "Eczar";
+}
+
+#footer-text {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
