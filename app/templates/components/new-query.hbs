@@ -1,36 +1,43 @@
-<div class="container" id="newQueryBlock">
+<!-- <div class="container" id="newQueryBlock">
 
-  <h4 id="forumHeaderParagraph">Are you curious about something? Is your need for the answer just burning you up inside? Click on the button below. You'll be provided with a form to post your question to the forum.</h4>
-  <hr>
+  <hr> -->
   {{#if postNewQuery}}
 
     <form>
 
-      <div class="form-group" id="queryForm">
+      <div class="form-group">
+
+        <h4>For the title field, keep it simple. One or two sentences is suggested and has been shown to yield more results.</h4>
+
+        <label for="query">enter query title:</label>
+        {{input class="form-control" value=query id="query"}}
+      </div>
+
+      <div class="form-group">
+
+        <h4>For additional info, feel free to get as detailed as you'd like. Pertinent information can only help your chances of getting a helpful answer!</h4>
+
+        <label for="notes">enter additional info :</label>
+        {{textarea class="form-control" value=notes id="notes"}}
+      </div>
+
+
+      <div class="form-group">
 
         <label for="author">Enter your name :</label>
         {{input class="form-control" value=author id="author"}}
       </div>
 
-      <div class="form-group" id="queryForm">
-
-        <label for="query">Enter the question you'd like to ask :</label>
-        <h6>Below, you'll have the chance to be more descriptive. In this next, keep your question simple. One or two sentences is suggested.</h6>
-        {{input class="form-control" value=query id="query"}}
-      </div>
-
-      <div class="form-group" id="queryFormNotes">
-
-        <label for="notes">Enter details relating to your query :</label>
-        {{textarea class="form-control" value=notes id="notes"}}
-      </div>
-
-      <button class="btn btn-default" {{action 'saveQuery'}}>Save</button>
+      <button class="btn btn-success" {{action 'saveQuery'}}>Save</button>
+      {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}close form{{/bs-button}}
     </form>
+
 
   {{else}}
 
-    <button class="btn btn-default" {{action "showForm"}}>ask forum</button>
+    <h4 id="forumHeaderParagraph">Are you curious about something? Is your need for the answer just burning you up inside? Click on the button below. You'll be provided with a form to post your question to the forum.</h4>
+
+    <button class="btn btn-default" {{action "showQueryForm"}}>ask forum</button>
 
   {{/if}}
-</div>
+<!-- </div> -->

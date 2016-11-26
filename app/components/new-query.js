@@ -5,15 +5,17 @@ import Ember from 'ember';
   actions:
   {
 
-    showForm()
-    {
+    hideContent: function() {
+     this.set('postNewQuery', false);
+    },
+
+    showQueryForm() {
       this.set('postNewQuery', true);
     },
 
-    saveQuery()
-    {
-      var params = {
+    saveQuery() {
 
+      var params = {
         author: this.get('author'),
         query: this.get('query'),
         notes: this.get('notes')

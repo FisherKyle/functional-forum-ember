@@ -16,7 +16,7 @@ export default Ember.Route.extend({
       {
           if (params[key] !== undefined)
           {
-            query.set(key,params[key]);
+            query.set(key, params[key]);
           }
       });
 
@@ -32,16 +32,14 @@ export default Ember.Route.extend({
 
       newReply.save().then(function()
       {
-       return query.save();
+      return query.save();
       });
-
       this.transitionTo('index');
     },
 
     deleteQuery(query)
     {
       query.destroyRecord();
-
       this.transitionTo('index');
     },
 

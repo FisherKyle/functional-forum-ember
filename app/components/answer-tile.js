@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 
   actions: {
 
-    deleteReply(reply) {
+    delete(reply) {
 
       if (confirm('This action is permanent. Continue?')) {
 

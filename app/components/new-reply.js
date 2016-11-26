@@ -3,18 +3,18 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   postNewReply: false,
 
-  actions:
-  {
+  actions: {
 
-    replyFormShow()
-    {
+    hideContent: function() {
+     this.set('postNewReply', false);
+    },
+
+    replyFormShow() {
       this.set('postNewReply', true);
     },
 
-    saveReply()
-    {
-      var params =
-      {
+    saveReply() {
+      var params = {
 
         author: this.get('author'),
         answer: this.get('answer'),

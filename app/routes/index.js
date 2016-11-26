@@ -1,6 +1,4 @@
-
 import Ember from 'ember';
-
 
 export default Ember.Route.extend({
   model() {
@@ -10,7 +8,8 @@ export default Ember.Route.extend({
     });
   },
 
-  actions: {
+  actions:
+  {
 
     saveQuery(params)
     {
@@ -24,6 +23,5 @@ export default Ember.Route.extend({
       query.destroyRecord();
       this.transitionTo('index');
     }
-    
   }
 });

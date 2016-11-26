@@ -1,5 +1,12 @@
+<h4>queries currently selected as <em>burning</em></h4>
+
 {{#each favorites.favorites as |query|}}
 
-   {{query.query}} {{query.author}}
-   
+  {{#link-to 'query' query.id}}
+
+    <h4><em>{{query.query}}</em></h4>
+    <h6>answered by: {{query.author}}</h6>
+
+  {{/link-to}}
+
 {{/each}}

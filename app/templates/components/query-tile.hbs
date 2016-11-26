@@ -1,46 +1,25 @@
-<div class="container">
+{{#link-to 'query' query.id}}
+  <h4>
+    {{query-rating query}} {{query.query}}
+  </h4>
+  <!-- <button class="btn btn-primary" {{action 'addToFavorites' query}}>save query as favorite</button> -->
+{{/link-to}}
 
-  <div class="jumbotron" onClick={{action 'showContent'}}>
-    <div class="row">
-      <div class="col_xs_9">
+<div class="container" onClick={{action 'showContent'}}>
 
-        {{#link-to 'query' query.id}}
-            <h5>
-              {{query-rating query}} {{query.query}}
-            </h5>
-        {{/link-to}}
-
-        <h5> asks :</h5>
-
-        <h3>
-          "{{query-rating query}} {{query.query}}"
-        </h3>
-      </div>
-    </div>
-
-    <div class="col_xs_3">
-      {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
-    </div>
-
-    {{#if detailsVisible}}
-
-      <div class="container">
-
-        <h4 class="details-line">
-
-          "{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}
-
-          <hr>
-
-          {{update-query query=query updateQuery="updateQuery" action="updateQuery" class="btn btn-warning" icon="glyphicon glyphicon-pencil"}}
-
-          {{query-detail query=query deleteQuery="deleteQuery" action="deleteQuery" class="btn btn-warning" icon="glyphicon glyphicon-remove"}}
-
-        </h4>
-          <!-- {{#bs-button class="btn btn-danger" type="primary" icon="glyphicon glyphicon-remove" action="deleteQuery"}}delete query{{/bs-button}} -->
-          <!-- {{update-query query=query update="update"}} -->
-
-      </div>
-    {{/if}}
+  <div class="row">
+    {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}} show details{{/bs-button}}
   </div>
+
+  {{#if detailsVisible}}
+
+    <div class="container">
+      <h4>"{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}</h4>
+    </div>
+
+    {{#link-to 'query' query.id}}
+      <button class="btn btn-default">query page</button>
+    {{/link-to}}
+
+  {{/if}}
 </div>
