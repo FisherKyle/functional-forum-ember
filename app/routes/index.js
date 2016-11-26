@@ -10,7 +10,6 @@ export default Ember.Route.extend({
 
   actions:
   {
-
     saveQuery(params)
     {
       var newQuery = this.store.createRecord('query', params);

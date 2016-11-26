@@ -53,7 +53,7 @@ export default Ember.Route.extend({
     addToFavorites(query)
     {
       query.addToFavorites();
-      this.transitionTo('query-detail');
+      this.transitionTo('index');
     }
   }
 });

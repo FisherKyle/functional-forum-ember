@@ -1,6 +1,3 @@
-<!-- <div class="container" id="newQueryBlock">
-
-  <hr> -->
   {{#if postNewQuery}}
 
     <form>
@@ -21,7 +18,6 @@
         {{textarea class="form-control" value=notes id="notes"}}
       </div>
 
-
       <div class="form-group">
 
         <label for="author">Enter your name :</label>
@@ -32,7 +28,6 @@
       {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}close form{{/bs-button}}
     </form>
 
-
   {{else}}
 
     <h4 id="forumHeaderParagraph">Are you curious about something? Is your need for the answer just burning you up inside? Click on the button below. You'll be provided with a form to post your question to the forum.</h4>
@@ -40,4 +35,3 @@
     <button class="btn btn-default" {{action "showQueryForm"}}>ask forum</button>
 
   {{/if}}
-<!-- </div> -->

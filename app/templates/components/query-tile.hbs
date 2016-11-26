@@ -5,16 +5,13 @@
     </h3>
   </div>
 
-
 <div class="container" onClick={{action 'showContent'}}>
 
   <div class="row">
     {{#link-to 'query' query.id}}
-
-    {{#bs-button class="btn btn-success" type="primary" icon="glyphicon glyphicon-puzzle-2" action="showContent"}}go to details page{{/bs-button}}
-
-    <!-- <button class="btn btn-xl btn-success" type="primary" icon="glyphicon glyphicon-plus">query page</button> -->
+      {{#bs-button class="btn btn-success" type="primary" icon="glyphicon glyphicon-puzzle-2" action="showContent"}}go to details page{{/bs-button}}
     {{/link-to}}
+
     {{#bs-button type="primary" icon="glyphicon glyphicon-plus" action="showContent"}}see more{{/bs-button}}
   </div>
 
@@ -25,7 +22,6 @@
         <em>"{{query.notes}}" {{#bs-button type="primary" icon="glyphicon glyphicon-minus" action="hideContent"}}{{/bs-button}}</em>
       </h4>
     </div>
-
 
   {{/if}}
 </div>

@@ -23,12 +23,11 @@
   </form>
 
 {{else}}
+
   <hr>
-  <button class="btn btn-sm btn-warning" icon="glyphicon glyphicon-pencil" {{action "updateQueryForm"}} id="otherButtons">edit query</button>
+  <button class="btn btn-sm btn-default" icon="glyphicon glyphicon-pencil" {{action "updateQueryForm"}} id="otherButtons">edit query</button>
   <hr>
   {{/if}}
-
-
 
 <!-- TODO: look into #bs-buttons ( ie: do they have a trait of which I'm unaware that caused for issues w/ sending actions? )  -->
 <!-- {{#bs-button class="btn btn-warning" type="primary" icon="glyphicon glyphicon-pencil" action="updateQuery"}}edit query{{/bs-button}} -->

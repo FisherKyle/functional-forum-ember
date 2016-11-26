@@ -2,24 +2,18 @@
 
 <div class="jumbotron" id="indexTron">
 
-  <div id="forum-header">
-
-  </div>
-
   <div class="container">
      {{#each model.queries as |query|}}
        {{query-tile query=query update="update"}}
        <hr>
      {{/each}}
   </div>
-
   <hr>
   <hr>
 
   <div class="container">
     {{new-query saveQuery="saveQuery"}}
   </div>
-
   <hr>
   <hr>
 
