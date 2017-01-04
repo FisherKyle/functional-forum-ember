@@ -49,7 +49,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### ~~Known Bugs~~
 ---
 
-## Further Reading / Useful Links
+### Further Reading / Useful Links
 ---
 
 * [ember.js](http://emberjs.com/)
@@ -57,3 +57,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+---
+---
+##### by Kyle Fisher 2016
